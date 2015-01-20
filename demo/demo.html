@@ -1,0 +1,300 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>css3</title> 
+<script src="jquery-2.1.0.js"></script> 
+<script> 
+
+</script> 
+<style type="text/css">
+label{
+	font: 14px "宋体";
+	margin-bottom: 20px;
+	display: inline-block;
+}
+.box{
+	width: 100%;
+	height: auto;
+	background: #ccc;
+	margin-bottom: 20px;
+	border-radius: 1 100%;
+}
+.tab{
+	width: 60px;
+	height: 40px;
+	background: #92B901;
+	font: bold 12px '微软雅黑', Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	border-radius: 5px;
+	-ms--border-radius:5px;
+	-moz--border-radius:5px;
+	-webkit-border-radius: 5px;
+}
+.tab_0{
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg);		/* IE 9 */
+	-webkit-transform: rotate(30deg);	/* Safari and Chrome */
+	-o-transform: rotate(30deg);		/* Opera */
+	-moz-transform: rotate(30deg);		/* Firefox */
+}
+.tab_1{
+	transform: translate(60px,20px);
+	-ms-transform: translate(60px,20px);		/* IE 9 */
+	-webkit-transform: translate(60px,20px);	/* Safari and Chrome */
+	-o-transform: translate(60px,20px);		/* Opera */
+	-moz-transform: translate(60px,20px);		/* Firefox */
+}
+.tab_2{
+     transform:scale(0.5,0.5);
+     -ms-transform:scale(0.5,0.5);
+     -webkit-transform: scale(0.5,0.5);	/* Safari and Chrome */
+	-o-transform: scale(0.5,0.5);		/* Opera */
+	-moz-transform: scale(0.5,0.5);		/* Firefox */
+}
+.tab_3{
+	transform: skew(30deg,20deg);
+	-ms-transform: skew(30deg,20deg);	/* IE 9 */
+	-webkit-transform: skew(20deg,0deg);	/* Safari and Chrome */
+	-o-transform: skew(30deg,20deg);	/* Opera */
+	-moz-transform: skew(30deg,20deg);	/* Firefox */
+}
+.tab_4{
+	transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+	-ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* IE 9 */
+	-moz-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Firefox */
+	-webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Safari and Chrome */
+	-o-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* Opera */
+}
+.tab_5{
+	transition: width 2s;
+	-moz-transition: width 2s;	/* Firefox 4 */
+	-webkit-transition: width 2s;	/* Safari 和 Chrome */
+	-o-transition: width 2s;	/* Opera */
+}
+.tab_5:hover{
+    width:120px;
+}
+.tab_6{
+	transition: width 2s, height 2s, transform 2s;
+	-moz-transition: width 2s, height 2s, -moz-transform 2s;
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+	-o-transition: width 2s, height 2s,-o-transform 2s;
+}
+.tab_6:hover{
+	width:200px;
+	height:200px;
+	transform:rotate(180deg);
+	-moz-transform:rotate(180deg); /* Firefox 4 */
+	-webkit-transform:rotate(180deg); /* Safari and Chrome */
+	-o-transform:rotate(180deg); /* Opera */
+}
+
+
+@keyframes myfirst
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+from {background: red;}
+to {background: yellow;}
+}
+.tab_7{
+	animation: myfirst 5s;
+	-moz-animation: myfirst 5s;	/* Firefox */
+	-webkit-animation: myfirst 5s;	/* Safari 和 Chrome */
+	-o-animation: myfirst 5s;	/* Opera */
+}
+.tab_8
+{
+width:100px;
+height:100px;
+background:red;
+position:relative;
+animation-name:myfirst;
+animation-duration:5s;
+animation-timing-function:linear;
+animation-delay:2s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+animation-play-state:running;
+/* Firefox: */
+-moz-animation-name:myfirst;
+-moz-animation-duration:5s;
+-moz-animation-timing-function:linear;
+-moz-animation-delay:2s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-direction:alternate;
+-moz-animation-play-state:running;
+/* Safari and Chrome: */
+-webkit-animation-name:myfirst;
+-webkit-animation-duration:5s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:2s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+/* Opera: */
+-o-animation-name:myfirst;
+-o-animation-duration:5s;
+-o-animation-timing-function:linear;
+-o-animation-delay:2s;
+-o-animation-iteration-count:infinite;
+-o-animation-direction:alternate;
+-o-animation-play-state:running;
+}
+
+@keyframes myfirst
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+</style>
+</head> 
+
+<body> 
+	<div class="box">
+       <label>旋转  transform: rotate(30deg);  </label>
+		<div class="tab tab_0"></div>
+	</div>
+	<div class="box">
+       <label>移动 x方向60px,y方向20px  transform: translate(60px,20px); </label>
+        <div class="tab"></div>
+		<div class="tab tab_1"></div>
+	</div>
+	<div class="box">
+       <label>缩小放大 倍数 transform:scale(0.5,0.5);</label>
+		<div class="tab tab_2"></div>
+	</div>
+	<div class="box">
+       <label>翻转 围着x轴翻转30度  transform: skew(30deg,20deg); </label>
+		<div class="tab tab_3"></div>
+	</div>
+	<div class="box">
+       <label>所有2d</label>
+		<div class="tab tab_4"></div>
+	</div>
+	<div class="box">
+       <label>过渡</label>
+       <pre>
+       	.tab_5{
+		transition: width 2s;
+		-moz-transition: width 2s;	/* Firefox 4 */
+		-webkit-transition: width 2s;	/* Safari 和 Chrome */
+		-o-transition: width 2s;	/* Opera */
+		}
+		.tab_5:hover{
+		width:120px;
+	    }
+       <pre>
+		<div class="tab tab_5"></div>
+	</div>
+	<div class="box">
+       <label>过渡</label>
+       <pre>
+.tab_6{
+	transition: width 2s, height 2s, transform 2s;
+	-moz-transition: width 2s, height 2s, -moz-transform 2s;
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+	-o-transition: width 2s, height 2s,-o-transform 2s;
+}
+.tab_6:hover{
+	width:200px;
+	height:200px;
+	transform:rotate(180deg);
+	-moz-transform:rotate(180deg); /* Firefox 4 */
+	-webkit-transform:rotate(180deg); /* Safari and Chrome */
+	-o-transform:rotate(180deg); /* Opera */
+}
+       <pre>
+		<div class="tab tab_6"></div>
+	</div>
+	<div class="box">
+       <label>过渡</label>
+       <pre>
+@keyframes myfirst
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+from {background: red;}
+to {background: yellow;}
+}
+.tab_7{
+	animation: myfirst 5s;
+	-moz-animation: myfirst 5s;	/* Firefox */
+	-webkit-animation: myfirst 5s;	/* Safari 和 Chrome */
+	-o-animation: myfirst 5s;	/* Opera */
+}
+       <pre>
+		<div class="tab tab_7"></div>
+	</div>
+	<div class="box">
+       <label>过渡</label>
+       <pre>
+
+       <pre>
+		<div class="tab tab_8"></div>
+	</div>
+</body> 
+</html> 
